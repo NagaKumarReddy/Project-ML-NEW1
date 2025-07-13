@@ -41,7 +41,8 @@ class SalesVisualizer:
         # Add trend line
         z = np.polyfit(range(len(data)), data['Sales'], 1)
         p = np.poly1d(z)
-        plt.plot(data['Date'], p(range(len(data)), "r--", alpha=0.8, label='Trend Line')
+        plt.plot(data['Date'], p(range(len(data))), "r--", alpha=0.8, label='Trend Line')
+
         plt.legend()
         
         plt.tight_layout()
